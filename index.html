@@ -1,31 +1,3 @@
-<!--
-  ═══════════════════════════════════════════════════════
-  LETTERS TO MY LOVE
-  ═══════════════════════════════════════════════════════
- 
-  HOW TO ADD A NEW LETTER:
-  Copy the block below and paste it at the TOP of the
-  <section class="letters-list"> (so newest is first).
- 
-  ┌─────────────────────────────────────────────────────┐
-  │ <article class="letter">                            │
-  │   <div class="letter-header">                       │
-  │     <time>Month DD, YYYY</time>                     │
-  │     <h2>Your Letter Title</h2>                      │
-  │     <p class="excerpt">Opening line of letter…</p>  │
-  │   </div>                                            │
-  │   <div class="letter-body">                         │
-  │     <p>My dearest,</p>                              │
-  │     <p>Your letter content goes here…</p>           │
-  │     <p class="sign-off">                            │
-  │       Forever yours,<br><em>Your Name</em>          │
-  │     </p>                                            │
-  │   </div>                                            │
-  │ </article>                                          │
-  └─────────────────────────────────────────────────────┘
- 
-  After editing: git add to-my-love.html && git commit -m "Add new letter" && git push
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
     :root {
       --cream:   #faf2e5;
       --paper:   #fffef9;
@@ -47,9 +19,9 @@
       --rule:    #e8ddd0;
       --shadow:  rgba(61, 43, 31, 0.10);
     }
- 
+
     html { scroll-behavior: smooth; }
- 
+
     body {
       background-color: var(--cream);
       background-image:
@@ -60,15 +32,14 @@
       min-height: 100vh;
       padding: 0 1rem 4rem;
     }
- 
-    /* ── Header ── */
+
     header {
       text-align: center;
       padding: 3.5rem 1rem 2.5rem;
       max-width: 680px;
       margin: 0 auto;
     }
- 
+
     .flourish {
       display: block;
       color: var(--accent);
@@ -77,7 +48,7 @@
       margin-bottom: 0.75rem;
       opacity: 0.7;
     }
- 
+
     header h1 {
       font-family: 'Playfair Display', Georgia, serif;
       font-size: clamp(2rem, 5vw, 3rem);
@@ -85,22 +56,21 @@
       color: var(--ink);
       line-height: 1.2;
     }
- 
+
     header p {
       margin-top: 0.6rem;
       color: var(--muted);
       font-style: italic;
       font-size: 1rem;
     }
- 
+
     .divider {
       margin: 2rem auto 0;
       width: 80px;
       height: 1px;
       background: linear-gradient(to right, transparent, var(--accent), transparent);
     }
- 
-    /* ── Letters list ── */
+
     .letters-list {
       max-width: 680px;
       margin: 0 auto;
@@ -108,8 +78,7 @@
       flex-direction: column;
       gap: 1.25rem;
     }
- 
-    /* ── Letter card ── */
+
     .letter {
       background: var(--paper);
       border-radius: 3px;
@@ -117,18 +86,17 @@
       overflow: hidden;
       transition: box-shadow 0.3s ease, transform 0.3s ease;
     }
- 
+
     .letter:hover {
       box-shadow: 0 6px 20px var(--shadow), 0 0 0 1px var(--rule);
       transform: translateY(-1px);
     }
- 
+
     .letter.open {
       box-shadow: 0 8px 28px rgba(110, 45, 82, 0.12), 0 0 0 1px rgba(110,45,82,0.18);
       transform: translateY(-2px);
     }
- 
-    /* ── Letter header (clickable) ── */
+
     .letter-header {
       padding: 1.4rem 1.6rem;
       cursor: pointer;
@@ -138,20 +106,18 @@
       grid-template-rows: auto auto;
       column-gap: 1rem;
       align-items: start;
-      position: relative;
     }
- 
+
     .letter-header time {
       grid-column: 1;
       font-size: 0.78rem;
-      font-family: 'Lora', serif;
       letter-spacing: 0.06em;
       color: var(--accent);
       font-style: italic;
       margin-bottom: 0.35rem;
       display: block;
     }
- 
+
     .letter-header h2 {
       grid-column: 1;
       font-family: 'Playfair Display', Georgia, serif;
@@ -160,7 +126,7 @@
       color: var(--ink);
       line-height: 1.3;
     }
- 
+
     .letter-header .excerpt {
       grid-column: 1 / -1;
       margin-top: 0.5rem;
@@ -173,15 +139,14 @@
       text-overflow: ellipsis;
       transition: opacity 0.25s;
     }
- 
+
     .letter.open .letter-header .excerpt {
       opacity: 0;
       height: 0;
       margin: 0;
       overflow: hidden;
     }
- 
-    /* Arrow toggle */
+
     .letter-header::after {
       content: '↓';
       grid-column: 2;
@@ -192,152 +157,982 @@
       opacity: 0.5;
       transition: transform 0.35s cubic-bezier(.77,.10,.22,1), opacity 0.2s;
     }
- 
+
     .letter.open .letter-header::after {
       transform: rotate(180deg);
       opacity: 0.8;
     }
- 
-    /* ── Letter body (expandable) ── */
+
     .letter-body {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.55s cubic-bezier(.77,.10,.22,1);
     }
- 
+
     .letter.open .letter-body {
-      max-height: 2000px;
+      max-height: 3000px;
     }
- 
+
     .letter-body-inner {
-      padding: 0 1.6rem 1.8rem;
+      padding: 1.4rem 1.6rem 1.8rem;
       border-top: 1px solid var(--rule);
-      padding-top: 1.4rem;
     }
- 
+
     .letter-body-inner p {
       font-size: 1rem;
       line-height: 1.85;
       color: var(--ink);
       margin-bottom: 1.1em;
     }
- 
+
     .letter-body-inner p:last-child { margin-bottom: 0; }
- 
+
     .sign-off {
       margin-top: 1.8rem !important;
       color: var(--accent) !important;
       font-style: italic;
     }
- 
-    /* ── Empty state ── */
-    .empty {
-      text-align: center;
-      padding: 3rem 1rem;
-      color: var(--muted);
-      font-style: italic;
-    }
- 
-    /* ── Responsive ── */
+
     @media (max-width: 480px) {
-      .letter-header { padding: 1.2rem 1.2rem; }
+      .letter-header { padding: 1.2rem; }
       .letter-body-inner { padding: 1.2rem 1.2rem 1.5rem; }
     }
+
+    #admin-panel {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(61,43,31,0.55);
+      backdrop-filter: blur(3px);
+      z-index: 100;
+      overflow-y: auto;
+      padding: 2rem 1rem;
+    }
+
+    #admin-panel.visible { display: flex; align-items: flex-start; justify-content: center; }
+
+    .admin-box {
+      background: var(--paper);
+      border-radius: 6px;
+      box-shadow: 0 12px 40px rgba(61,43,31,0.25);
+      padding: 2rem;
+      width: 100%;
+      max-width: 620px;
+      margin: auto;
+    }
+
+    .admin-box h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+
+    .admin-box .admin-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .field { margin-bottom: 1.1rem; }
+
+    .field label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      font-family: 'Lora', serif;
+      font-size: 0.95rem;
+      color: var(--ink);
+      background: var(--cream);
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      padding: 0.6rem 0.8rem;
+      outline: none;
+      resize: vertical;
+      transition: border-color 0.2s;
+    }
+
+    .field input:focus,
+    .field textarea:focus { border-color: var(--accent); }
+
+    .field textarea { min-height: 180px; line-height: 1.7; }
+
+    .admin-actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-family: 'Lora', serif;
+      font-size: 0.9rem;
+      padding: 0.6rem 1.4rem;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+
+    .btn:active { transform: scale(0.97); }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-secondary { background: transparent; color: var(--muted); border: 1px solid var(--rule); }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .admin-status {
+      margin-top: 1rem;
+      font-size: 0.88rem;
+      font-style: italic;
+      min-height: 1.4em;
+    }
+
+    .status-ok   { color: #4a7c4e; }
+    .status-err  { color: #b94040; }
+    .status-info { color: var(--muted); }
+
+    .setup-section {
+      border-top: 1px solid var(--rule);
+      margin-top: 1.5rem;
+      padding-top: 1.2rem;
+    }
+
+    .setup-section summary {
+      font-size: 0.82rem;
+      color: var(--muted);
+      cursor: pointer;
+    }
+
+    .setup-section .field { margin-top: 0.8rem; }
+
+    .token-hint {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.3rem;
+      line-height: 1.5;
+    }
+
+    .token-hint a { color: var(--accent); }
   </style>
 </head>
 <body>
- 
+
   <header>
-    <span class="flourish">✦ ✦ ✦</span>
+    <span class="flourish">&#10022; &#10022; &#10022;</span>
     <h1>Letters to My Love</h1>
     <p>Written for you, always.</p>
     <div class="divider"></div>
   </header>
- 
-  <section class="letters-list">
- 
-    <!-- ═══ ADD NEW LETTERS ABOVE THIS LINE (newest first) ═══ -->
- 
+
+  <section class="letters-list" id="letters-list">
+    <!-- LETTERS_PLACEHOLDER -->
+
     <article class="letter">
       <div class="letter-header">
         <time>April 18, 2026</time>
         <h2>The First of Many</h2>
-        <p class="excerpt">I built this little corner of the internet just for you…</p>
+        <p class="excerpt">I built this little corner of the internet just for you&hellip;</p>
       </div>
       <div class="letter-body">
         <div class="letter-body-inner">
           <p>My dearest,</p>
-          <p>
-            I built this little corner of the internet just for you. Whenever the words feel
-            too big for a text message, or I want you to have something to return to on a
-            quiet evening — you'll find them here.
-          </p>
-          <p>
-            There are no grand announcements, no audience. Just you, and whatever I have
-            needed to say. I hope that each time you open this page you feel, even for a
-            moment, exactly how much you are loved.
-          </p>
-          <p class="sign-off">
-            Forever yours,<br>
-            <em>Your love</em>
-          </p>
+          <p>I built this little corner of the internet just for you. Whenever the words feel too big for a text message, or I want you to have something to return to on a quiet evening &mdash; you&rsquo;ll find them here.</p>
+          <p>There are no grand announcements, no audience. Just you, and whatever I have needed to say. I hope that each time you open this page you feel, even for a moment, exactly how much you are loved.</p>
+          <p class="sign-off">Forever yours,<br><em>Your love</em></p>
         </div>
       </div>
     </article>
- 
+
     <article class="letter">
       <div class="letter-header">
         <time>April 15, 2026</time>
         <h2>A Quiet Tuesday</h2>
-        <p class="excerpt">Nothing special happened today — which is exactly why I wanted to write…</p>
+        <p class="excerpt">Nothing special happened today &mdash; which is exactly why I wanted to write&hellip;</p>
       </div>
       <div class="letter-body">
         <div class="letter-body-inner">
           <p>My love,</p>
-          <p>
-            Nothing special happened today — which is exactly why I wanted to write. I've
-            noticed I tend to save big feelings for big occasions, and forget to say the
-            small ones out loud.
-          </p>
-          <p>
-            So here it is: I am so grateful for ordinary days with you. The coffee, the
-            quiet, the way you laugh at your own jokes before you finish telling them.
-            All of it.
-          </p>
-          <p>
-            I love you more than I remember to say.
-          </p>
-          <p class="sign-off">
-            Yours always,<br>
-            <em>Your love</em>
-          </p>
+          <p>Nothing special happened today &mdash; which is exactly why I wanted to write. I&rsquo;ve noticed I tend to save big feelings for big occasions, and forget to say the small ones out loud.</p>
+          <p>So here it is: I am so grateful for ordinary days with you. The coffee, the quiet, the way you laugh at your own jokes before you finish telling them. All of it.</p>
+          <p>I love you more than I remember to say.</p>
+          <p class="sign-off">Yours always,<br><em>Your love</em></p>
         </div>
       </div>
     </article>
- 
+
   </section>
- 
+
+  <div id="admin-panel">
+    <div class="admin-box">
+      <h2>Write a Letter</h2>
+      <p class="admin-sub">Your words will appear on the page after a few seconds.</p>
+
+      <div class="field">
+        <label>Date</label>
+        <input type="text" id="f-date" placeholder="e.g. April 18, 2026">
+      </div>
+      <div class="field">
+        <label>Title</label>
+        <input type="text" id="f-title" placeholder="e.g. A Sunday Morning">
+      </div>
+      <div class="field">
+        <label>Opening line (shown as preview)</label>
+        <input type="text" id="f-excerpt" placeholder="First sentence of your letter…">
+      </div>
+      <div class="field">
+        <label>Letter (press Enter twice for new paragraph)</label>
+        <textarea id="f-body" placeholder="My dearest,&#10;&#10;Write your letter here…&#10;&#10;Forever yours,&#10;Your name"></textarea>
+      </div>
+
+      <div class="admin-actions">
+        <button class="btn btn-primary" id="btn-publish">Publish letter</button>
+        <button class="btn btn-secondary" id="btn-close">Cancel</button>
+      </div>
+      <div class="admin-status" id="admin-status"></div>
+
+      <details class="setup-section">
+        <summary>&#9881; Settings (GitHub token &amp; repo)</summary>
+        <div class="field">
+          <label>GitHub token</label>
+          <input type="password" id="cfg-token" placeholder="ghp_xxxxxxxxxxxx">
+          <p class="token-hint">
+            Create one at <a href="https://github.com/settings/tokens/new?scopes=repo&description=love-letters" target="_blank">github.com/settings/tokens</a>
+            &mdash; tick <strong>repo</strong>. Saved only in your browser.
+          </p>
+        </div>
+        <div class="field">
+          <label>GitHub username / repo name</label>
+          <input type="text" id="cfg-repo" placeholder="alexdangyeuvl/Formywife">
+        </div>
+        <div class="field">
+          <label>File path in repo</label>
+          <input type="text" id="cfg-file" placeholder="index.html">
+        </div>
+        <div class="field">
+          <label>Branch</label>
+          <input type="text" id="cfg-branch" placeholder="main">
+        </div>
+        <div class="admin-actions">
+          <button class="btn btn-secondary" id="btn-save-cfg">Save settings</button>
+        </div>
+      </details>
+    </div>
+  </div>
+
   <script>
-    document.querySelectorAll('.letter-header').forEach(function(header) {
-      header.addEventListener('click', function() {
+    document.querySelectorAll('.letter-header').forEach(function(h) {
+      h.addEventListener('click', function() {
         var letter = this.closest('.letter');
-        var isOpen = letter.classList.contains('open');
- 
-        // Close all open letters
-        document.querySelectorAll('.letter.open').forEach(function(el) {
-          el.classList.remove('open');
-        });
- 
-        // Open clicked one if it wasn't already open
-        if (!isOpen) {
+        var wasOpen = letter.classList.contains('open');
+        document.querySelectorAll('.letter.open').forEach(function(el) { el.classList.remove('open'); });
+        if (!wasOpen) {
           letter.classList.add('open');
-          setTimeout(function() {
-            letter.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          }, 60);
+          setTimeout(function() { letter.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 60);
         }
       });
     });
+
+    var panel = document.getElementById('admin-panel');
+    if (location.search.includes('write')) {
+      panel.classList.add('visible');
+      loadConfig();
+      setToday();
+    }
+
+    document.getElementById('btn-close').addEventListener('click', function() {
+      panel.classList.remove('visible');
+      history.replaceState(null, '', location.pathname);
+    });
+
+    function loadConfig() {
+      document.getElementById('cfg-token').value  = localStorage.getItem('ll_token')  || '';
+      document.getElementById('cfg-repo').value   = localStorage.getItem('ll_repo')   || 'alexdangyeuvl/Formywife';
+      document.getElementById('cfg-file').value   = localStorage.getItem('ll_file')   || 'index.html';
+      document.getElementById('cfg-branch').value = localStorage.getItem('ll_branch') || 'main';
+    }
+
+    document.getElementById('btn-save-cfg').addEventListener('click', function() {
+      localStorage.setItem('ll_token',  document.getElementById('cfg-token').value.trim());
+      localStorage.setItem('ll_repo',   document.getElementById('cfg-repo').value.trim());
+      localStorage.setItem('ll_file',   document.getElementById('cfg-file').value.trim());
+      localStorage.setItem('ll_branch', document.getElementById('cfg-branch').value.trim());
+      setStatus('Settings saved.', 'status-ok');
+    });
+
+    function setToday() {
+      var d = new Date();
+      var months = ['January','February','March','April','May','June',
+                    'July','August','September','October','November','December'];
+      document.getElementById('f-date').value = months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+    }
+
+    function setStatus(msg, cls) {
+      var el = document.getElementById('admin-status');
+      el.textContent = msg;
+      el.className = 'admin-status ' + (cls || '');
+    }
+
+    document.getElementById('btn-publish').addEventListener('click', async function() {
+      var token  = localStorage.getItem('ll_token')  || '';
+      var repo   = localStorage.getItem('ll_repo')   || '';
+      var file   = localStorage.getItem('ll_file')   || 'index.html';
+      var branch = localStorage.getItem('ll_branch') || 'main';
+
+      var date    = document.getElementById('f-date').value.trim();
+      var title   = document.getElementById('f-title').value.trim();
+      var excerpt = document.getElementById('f-excerpt').value.trim();
+      var body    = document.getElementById('f-body').value.trim();
+
+      if (!date || !title || !body) { setStatus('Please fill in date, title, and letter.', 'status-err'); return; }
+      if (!token || !repo)          { setStatus('Open Settings below and enter your GitHub token and repo.', 'status-err'); return; }
+
+      var paragraphs = body.split(/\n\n+/).map(function(p) {
+        var line = p.trim().replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        var cls = (line.startsWith('Forever') || line.startsWith('Yours') || line.startsWith('Always') ||
+                   line.startsWith('With love') || line.startsWith('Love,') || line.startsWith('Your'))
+                  ? ' class="sign-off"' : '';
+        return '          <p' + cls + '>' + line.replace(/\n/g,'<br>') + '</p>';
+      }).join('\n');
+
+      var newArticle =
+        '    <article class="letter">\n' +
+        '      <div class="letter-header">\n' +
+        '        <time>' + esc(date) + '</time>\n' +
+        '        <h2>' + esc(title) + '</h2>\n' +
+        '        <p class="excerpt">' + esc(excerpt || body.split('\n')[0].slice(0,80)) + '&hellip;</p>\n' +
+        '      </div>\n' +
+        '      <div class="letter-body">\n' +
+        '        <div class="letter-body-inner">\n' +
+        paragraphs + '\n' +
+        '        </div>\n' +
+        '      </div>\n' +
+        '    </article>\n\n';
+
+      var btn = this;
+      btn.disabled = true;
+      setStatus('Fetching current file…', 'status-info');
+
+      try {
+        var res = await fetch('https://api.github.com/repos/' + repo + '/contents/' + file + '?ref=' + branch,
+          { headers: { Authorization: 'token ' + token, Accept: 'application/vnd.github.v3+json' } });
+        if (!res.ok) throw new Error('Could not fetch file (' + res.status + '). Check token and repo name.');
+        var data = await res.json();
+        var currentContent = atob(data.content.replace(/\n/g, ''));
+        var sha = data.sha;
+
+        if (!currentContent.includes('<!-- LETTERS_PLACEHOLDER -->'))
+          throw new Error('Marker not found. Make sure this file was created by this tool.');
+
+        var newContent = currentContent.replace('<!-- LETTERS_PLACEHOLDER -->', newArticle + '    <!-- LETTERS_PLACEHOLDER -->');
+
+        setStatus('Publishing…', 'status-info');
+        var putRes = await fetch('https://api.github.com/repos/' + repo + '/contents/' + file, {
+          method: 'PUT',
+          headers: { Authorization: 'token ' + token, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: 'Add letter: ' + title,
+            content: btoa(unescape(encodeURIComponent(newContent))),
+            sha: sha,
+            branch: branch
+          })
+        });
+
+        if (!putRes.ok) { var err = await putRes.json(); throw new Error(err.message || putRes.status); }
+
+        setStatus('Letter published! Page updates in ~30 seconds.', 'status-ok');
+        document.getElementById('f-title').value = '';
+        document.getElementById('f-excerpt').value = '';
+        document.getElementById('f-body').value = '';
+        setToday();
+      } catch(e) {
+        setStatus('Error: ' + e.message, 'status-err');
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
+    function esc(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
   </script>
- 
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letters to My Love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:   #faf2e5;
+      --paper:   #fffef9;
+      --ink:     #3d2b1f;
+      --muted:   #7a6355;
+      --accent:  #6e2d52;
+      --rule:    #e8ddd0;
+      --shadow:  rgba(61, 43, 31, 0.10);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--cream);
+      background-image:
+        radial-gradient(ellipse at 20% 10%, rgba(110,45,82,0.04) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 90%, rgba(110,45,82,0.04) 0%, transparent 60%);
+      color: var(--ink);
+      font-family: 'Lora', Georgia, serif;
+      min-height: 100vh;
+      padding: 0 1rem 4rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 3.5rem 1rem 2.5rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .flourish {
+      display: block;
+      color: var(--accent);
+      font-size: 1.4rem;
+      letter-spacing: 0.3em;
+      margin-bottom: 0.75rem;
+      opacity: 0.7;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    header p {
+      margin-top: 0.6rem;
+      color: var(--muted);
+      font-style: italic;
+      font-size: 1rem;
+    }
+
+    .divider {
+      margin: 2rem auto 0;
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--accent), transparent);
+    }
+
+    .letters-list {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .letter {
+      background: var(--paper);
+      border-radius: 3px;
+      box-shadow: 0 2px 8px var(--shadow), 0 0 0 1px var(--rule);
+      overflow: hidden;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .letter:hover {
+      box-shadow: 0 6px 20px var(--shadow), 0 0 0 1px var(--rule);
+      transform: translateY(-1px);
+    }
+
+    .letter.open {
+      box-shadow: 0 8px 28px rgba(110, 45, 82, 0.12), 0 0 0 1px rgba(110,45,82,0.18);
+      transform: translateY(-2px);
+    }
+
+    .letter-header {
+      padding: 1.4rem 1.6rem;
+      cursor: pointer;
+      user-select: none;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto;
+      column-gap: 1rem;
+      align-items: start;
+    }
+
+    .letter-header time {
+      grid-column: 1;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      font-style: italic;
+      margin-bottom: 0.35rem;
+      display: block;
+    }
+
+    .letter-header h2 {
+      grid-column: 1;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    .letter-header .excerpt {
+      grid-column: 1 / -1;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-style: italic;
+      line-height: 1.5;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: opacity 0.25s;
+    }
+
+    .letter.open .letter-header .excerpt {
+      opacity: 0;
+      height: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .letter-header::after {
+      content: '↓';
+      grid-column: 2;
+      grid-row: 1 / 3;
+      align-self: center;
+      font-size: 1rem;
+      color: var(--accent);
+      opacity: 0.5;
+      transition: transform 0.35s cubic-bezier(.77,.10,.22,1), opacity 0.2s;
+    }
+
+    .letter.open .letter-header::after {
+      transform: rotate(180deg);
+      opacity: 0.8;
+    }
+
+    .letter-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.55s cubic-bezier(.77,.10,.22,1);
+    }
+
+    .letter.open .letter-body {
+      max-height: 3000px;
+    }
+
+    .letter-body-inner {
+      padding: 1.4rem 1.6rem 1.8rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .letter-body-inner p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--ink);
+      margin-bottom: 1.1em;
+    }
+
+    .letter-body-inner p:last-child { margin-bottom: 0; }
+
+    .sign-off {
+      margin-top: 1.8rem !important;
+      color: var(--accent) !important;
+      font-style: italic;
+    }
+
+    @media (max-width: 480px) {
+      .letter-header { padding: 1.2rem; }
+      .letter-body-inner { padding: 1.2rem 1.2rem 1.5rem; }
+    }
+
+    #admin-panel {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(61,43,31,0.55);
+      backdrop-filter: blur(3px);
+      z-index: 100;
+      overflow-y: auto;
+      padding: 2rem 1rem;
+    }
+
+    #admin-panel.visible { display: flex; align-items: flex-start; justify-content: center; }
+
+    .admin-box {
+      background: var(--paper);
+      border-radius: 6px;
+      box-shadow: 0 12px 40px rgba(61,43,31,0.25);
+      padding: 2rem;
+      width: 100%;
+      max-width: 620px;
+      margin: auto;
+    }
+
+    .admin-box h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+
+    .admin-box .admin-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .field { margin-bottom: 1.1rem; }
+
+    .field label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      font-family: 'Lora', serif;
+      font-size: 0.95rem;
+      color: var(--ink);
+      background: var(--cream);
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      padding: 0.6rem 0.8rem;
+      outline: none;
+      resize: vertical;
+      transition: border-color 0.2s;
+    }
+
+    .field input:focus,
+    .field textarea:focus { border-color: var(--accent); }
+
+    .field textarea { min-height: 180px; line-height: 1.7; }
+
+    .admin-actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-family: 'Lora', serif;
+      font-size: 0.9rem;
+      padding: 0.6rem 1.4rem;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+
+    .btn:active { transform: scale(0.97); }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-secondary { background: transparent; color: var(--muted); border: 1px solid var(--rule); }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .admin-status {
+      margin-top: 1rem;
+      font-size: 0.88rem;
+      font-style: italic;
+      min-height: 1.4em;
+    }
+
+    .status-ok   { color: #4a7c4e; }
+    .status-err  { color: #b94040; }
+    .status-info { color: var(--muted); }
+
+    .setup-section {
+      border-top: 1px solid var(--rule);
+      margin-top: 1.5rem;
+      padding-top: 1.2rem;
+    }
+
+    .setup-section summary {
+      font-size: 0.82rem;
+      color: var(--muted);
+      cursor: pointer;
+    }
+
+    .setup-section .field { margin-top: 0.8rem; }
+
+    .token-hint {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.3rem;
+      line-height: 1.5;
+    }
+
+    .token-hint a { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="flourish">&#10022; &#10022; &#10022;</span>
+    <h1>Letters to My Love</h1>
+    <p>Written for you, always.</p>
+    <div class="divider"></div>
+  </header>
+
+  <section class="letters-list" id="letters-list">
+    <!-- LETTERS_PLACEHOLDER -->
+
+    <article class="letter">
+      <div class="letter-header">
+        <time>April 18, 2026</time>
+        <h2>The First of Many</h2>
+        <p class="excerpt">I built this little corner of the internet just for you&hellip;</p>
+      </div>
+      <div class="letter-body">
+        <div class="letter-body-inner">
+          <p>My dearest,</p>
+          <p>I built this little corner of the internet just for you. Whenever the words feel too big for a text message, or I want you to have something to return to on a quiet evening &mdash; you&rsquo;ll find them here.</p>
+          <p>There are no grand announcements, no audience. Just you, and whatever I have needed to say. I hope that each time you open this page you feel, even for a moment, exactly how much you are loved.</p>
+          <p class="sign-off">Forever yours,<br><em>Your love</em></p>
+        </div>
+      </div>
+    </article>
+
+    <article class="letter">
+      <div class="letter-header">
+        <time>April 15, 2026</time>
+        <h2>A Quiet Tuesday</h2>
+        <p class="excerpt">Nothing special happened today &mdash; which is exactly why I wanted to write&hellip;</p>
+      </div>
+      <div class="letter-body">
+        <div class="letter-body-inner">
+          <p>My love,</p>
+          <p>Nothing special happened today &mdash; which is exactly why I wanted to write. I&rsquo;ve noticed I tend to save big feelings for big occasions, and forget to say the small ones out loud.</p>
+          <p>So here it is: I am so grateful for ordinary days with you. The coffee, the quiet, the way you laugh at your own jokes before you finish telling them. All of it.</p>
+          <p>I love you more than I remember to say.</p>
+          <p class="sign-off">Yours always,<br><em>Your love</em></p>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <div id="admin-panel">
+    <div class="admin-box">
+      <h2>Write a Letter</h2>
+      <p class="admin-sub">Your words will appear on the page after a few seconds.</p>
+
+      <div class="field">
+        <label>Date</label>
+        <input type="text" id="f-date" placeholder="e.g. April 18, 2026">
+      </div>
+      <div class="field">
+        <label>Title</label>
+        <input type="text" id="f-title" placeholder="e.g. A Sunday Morning">
+      </div>
+      <div class="field">
+        <label>Opening line (shown as preview)</label>
+        <input type="text" id="f-excerpt" placeholder="First sentence of your letter…">
+      </div>
+      <div class="field">
+        <label>Letter (press Enter twice for new paragraph)</label>
+        <textarea id="f-body" placeholder="My dearest,&#10;&#10;Write your letter here…&#10;&#10;Forever yours,&#10;Your name"></textarea>
+      </div>
+
+      <div class="admin-actions">
+        <button class="btn btn-primary" id="btn-publish">Publish letter</button>
+        <button class="btn btn-secondary" id="btn-close">Cancel</button>
+      </div>
+      <div class="admin-status" id="admin-status"></div>
+
+      <details class="setup-section">
+        <summary>&#9881; Settings (GitHub token &amp; repo)</summary>
+        <div class="field">
+          <label>GitHub token</label>
+          <input type="password" id="cfg-token" placeholder="ghp_xxxxxxxxxxxx">
+          <p class="token-hint">
+            Create one at <a href="https://github.com/settings/tokens/new?scopes=repo&description=love-letters" target="_blank">github.com/settings/tokens</a>
+            &mdash; tick <strong>repo</strong>. Saved only in your browser.
+          </p>
+        </div>
+        <div class="field">
+          <label>GitHub username / repo name</label>
+          <input type="text" id="cfg-repo" placeholder="alexdangyeuvl/Formywife">
+        </div>
+        <div class="field">
+          <label>File path in repo</label>
+          <input type="text" id="cfg-file" placeholder="index.html">
+        </div>
+        <div class="field">
+          <label>Branch</label>
+          <input type="text" id="cfg-branch" placeholder="main">
+        </div>
+        <div class="admin-actions">
+          <button class="btn btn-secondary" id="btn-save-cfg">Save settings</button>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.letter-header').forEach(function(h) {
+      h.addEventListener('click', function() {
+        var letter = this.closest('.letter');
+        var wasOpen = letter.classList.contains('open');
+        document.querySelectorAll('.letter.open').forEach(function(el) { el.classList.remove('open'); });
+        if (!wasOpen) {
+          letter.classList.add('open');
+          setTimeout(function() { letter.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 60);
+        }
+      });
+    });
+
+    var panel = document.getElementById('admin-panel');
+    if (location.search.includes('write')) {
+      panel.classList.add('visible');
+      loadConfig();
+      setToday();
+    }
+
+    document.getElementById('btn-close').addEventListener('click', function() {
+      panel.classList.remove('visible');
+      history.replaceState(null, '', location.pathname);
+    });
+
+    function loadConfig() {
+      document.getElementById('cfg-token').value  = localStorage.getItem('ll_token')  || '';
+      document.getElementById('cfg-repo').value   = localStorage.getItem('ll_repo')   || 'alexdangyeuvl/Formywife';
+      document.getElementById('cfg-file').value   = localStorage.getItem('ll_file')   || 'index.html';
+      document.getElementById('cfg-branch').value = localStorage.getItem('ll_branch') || 'main';
+    }
+
+    document.getElementById('btn-save-cfg').addEventListener('click', function() {
+      localStorage.setItem('ll_token',  document.getElementById('cfg-token').value.trim());
+      localStorage.setItem('ll_repo',   document.getElementById('cfg-repo').value.trim());
+      localStorage.setItem('ll_file',   document.getElementById('cfg-file').value.trim());
+      localStorage.setItem('ll_branch', document.getElementById('cfg-branch').value.trim());
+      setStatus('Settings saved.', 'status-ok');
+    });
+
+    function setToday() {
+      var d = new Date();
+      var months = ['January','February','March','April','May','June',
+                    'July','August','September','October','November','December'];
+      document.getElementById('f-date').value = months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+    }
+
+    function setStatus(msg, cls) {
+      var el = document.getElementById('admin-status');
+      el.textContent = msg;
+      el.className = 'admin-status ' + (cls || '');
+    }
+
+    document.getElementById('btn-publish').addEventListener('click', async function() {
+      var token  = localStorage.getItem('ll_token')  || '';
+      var repo   = localStorage.getItem('ll_repo')   || '';
+      var file   = localStorage.getItem('ll_file')   || 'index.html';
+      var branch = localStorage.getItem('ll_branch') || 'main';
+
+      var date    = document.getElementById('f-date').value.trim();
+      var title   = document.getElementById('f-title').value.trim();
+      var excerpt = document.getElementById('f-excerpt').value.trim();
+      var body    = document.getElementById('f-body').value.trim();
+
+      if (!date || !title || !body) { setStatus('Please fill in date, title, and letter.', 'status-err'); return; }
+      if (!token || !repo)          { setStatus('Open Settings below and enter your GitHub token and repo.', 'status-err'); return; }
+
+      var paragraphs = body.split(/\n\n+/).map(function(p) {
+        var line = p.trim().replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        var cls = (line.startsWith('Forever') || line.startsWith('Yours') || line.startsWith('Always') ||
+                   line.startsWith('With love') || line.startsWith('Love,') || line.startsWith('Your'))
+                  ? ' class="sign-off"' : '';
+        return '          <p' + cls + '>' + line.replace(/\n/g,'<br>') + '</p>';
+      }).join('\n');
+
+      var newArticle =
+        '    <article class="letter">\n' +
+        '      <div class="letter-header">\n' +
+        '        <time>' + esc(date) + '</time>\n' +
+        '        <h2>' + esc(title) + '</h2>\n' +
+        '        <p class="excerpt">' + esc(excerpt || body.split('\n')[0].slice(0,80)) + '&hellip;</p>\n' +
+        '      </div>\n' +
+        '      <div class="letter-body">\n' +
+        '        <div class="letter-body-inner">\n' +
+        paragraphs + '\n' +
+        '        </div>\n' +
+        '      </div>\n' +
+        '    </article>\n\n';
+
+      var btn = this;
+      btn.disabled = true;
+      setStatus('Fetching current file…', 'status-info');
+
+      try {
+        var res = await fetch('https://api.github.com/repos/' + repo + '/contents/' + file + '?ref=' + branch,
+          { headers: { Authorization: 'token ' + token, Accept: 'application/vnd.github.v3+json' } });
+        if (!res.ok) throw new Error('Could not fetch file (' + res.status + '). Check token and repo name.');
+        var data = await res.json();
+        var currentContent = atob(data.content.replace(/\n/g, ''));
+        var sha = data.sha;
+
+        if (!currentContent.includes('<!-- LETTERS_PLACEHOLDER -->'))
+          throw new Error('Marker not found. Make sure this file was created by this tool.');
+
+        var newContent = currentContent.replace('<!-- LETTERS_PLACEHOLDER -->', newArticle + '    <!-- LETTERS_PLACEHOLDER -->');
+
+        setStatus('Publishing…', 'status-info');
+        var putRes = await fetch('https://api.github.com/repos/' + repo + '/contents/' + file, {
+          method: 'PUT',
+          headers: { Authorization: 'token ' + token, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: 'Add letter: ' + title,
+            content: btoa(unescape(encodeURIComponent(newContent))),
+            sha: sha,
+            branch: branch
+          })
+        });
+
+        if (!putRes.ok) { var err = await putRes.json(); throw new Error(err.message || putRes.status); }
+
+        setStatus('Letter published! Page updates in ~30 seconds.', 'status-ok');
+        document.getElementById('f-title').value = '';
+        document.getElementById('f-excerpt').value = '';
+        document.getElementById('f-body').value = '';
+        setToday();
+      } catch(e) {
+        setStatus('Error: ' + e.message, 'status-err');
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
+    function esc(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+  </script>
+
 </body>
 </html>

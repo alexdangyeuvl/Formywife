@@ -148,7 +148,7 @@
     }
 
     .letter-header::after {
-      content: 'â';
+      content: 'Ã¢ÂÂ';
       grid-column: 2;
       grid-row: 1 / 3;
       align-self: center;
@@ -338,11 +338,24 @@
       <div class="letter-header">
         <time>April 18, 2026</time>
         <h2>Hello</h2>
-        <p class="excerpt">Đây là cái web anh mới tạo để viết thư cho em, lần đầu anh mày mò code&hellip;</p>
+        <p class="excerpt">ÄÃ¢y lÃ  cÃ¡i web anh má»i táº¡o Äá» viáº¿t thÆ° cho em, láº§n Äáº§u anh mÃ y mÃ² code&hellip;</p>
       </div>
       <div class="letter-body">
         <div class="letter-body-inner">
-          <p>Chào em, <br>Không biết nó có hoạt động ok không nhỉ kkk. Anh thử ngồi mày mò ngồi code ciếc trong mấy lúc việc học nhàm chán quá và nhớ em.</p>
+          <p>ChÃ o em, <br>KhÃ´ng biáº¿t nÃ³ cÃ³ hoáº¡t Äá»ng ok khÃ´ng nhá» kkk. Anh thá»­ ngá»i mÃ y mÃ² ngá»i code ciáº¿c trong máº¥y lÃºc viá»c há»c nhÃ m chÃ¡n quÃ¡ vÃ  nhá» em.</p>
+        </div>
+      </div>
+    </article>
+
+        <article class="letter">
+      <div class="letter-header">
+        <time>April 18, 2026</time>
+        <h2>Hello</h2>
+        <p class="excerpt">Anh nè&hellip;</p>
+      </div>
+      <div class="letter-body">
+        <div class="letter-body-inner">
+          <p>Chào em,<br>Anh ngồi mày mò học code, tạo cái này để thử viết thư cho em trong lúc học quá chán và nhớ em. Để xem nó có được không hehe</p>
         </div>
       </div>
     </article>
@@ -399,11 +412,11 @@
       </div>
       <div class="field">
         <label>Opening line (shown as preview)</label>
-        <input type="text" id="f-excerpt" placeholder="First sentence of your letterâ¦">
+        <input type="text" id="f-excerpt" placeholder="First sentence of your letterÃ¢ÂÂ¦">
       </div>
       <div class="field">
         <label>Letter (press Enter twice for new paragraph)</label>
-        <textarea id="f-body" placeholder="My dearest,&#10;&#10;Write your letter hereâ¦&#10;&#10;Forever yours,&#10;Your name"></textarea>
+        <textarea id="f-body" placeholder="My dearest,&#10;&#10;Write your letter hereÃ¢ÂÂ¦&#10;&#10;Forever yours,&#10;Your name"></textarea>
       </div>
 
       <div class="admin-actions">
@@ -532,7 +545,7 @@
 
       var btn = this;
       btn.disabled = true;
-      setStatus('Fetching current fileâ¦', 'status-info');
+      setStatus('Fetching current fileÃ¢ÂÂ¦', 'status-info');
 
       try {
         var res = await fetch('https://api.github.com/repos/' + repo + '/contents/' + file + '?ref=' + branch,
@@ -547,7 +560,7 @@
 
         var newContent = currentContent.replace('<!-- LETTERS_PLACEHOLDER -->', newArticle + '    <!-- LETTERS_PLACEHOLDER -->');
 
-        setStatus('Publishingâ¦', 'status-info');
+        setStatus('PublishingÃ¢ÂÂ¦', 'status-info');
         var putRes = await fetch('https://api.github.com/repos/' + repo + '/contents/' + file, {
           method: 'PUT',
           headers: { Authorization: 'token ' + token, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
@@ -730,7 +743,7 @@
     }
 
     .letter-header::after {
-      content: 'â';
+      content: 'Ã¢ÂÂ';
       grid-column: 2;
       grid-row: 1 / 3;
       align-self: center;
@@ -968,11 +981,11 @@
       </div>
       <div class="field">
         <label>Opening line (shown as preview)</label>
-        <input type="text" id="f-excerpt" placeholder="First sentence of your letterâ¦">
+        <input type="text" id="f-excerpt" placeholder="First sentence of your letterÃ¢ÂÂ¦">
       </div>
       <div class="field">
         <label>Letter (press Enter twice for new paragraph)</label>
-        <textarea id="f-body" placeholder="My dearest,&#10;&#10;Write your letter hereâ¦&#10;&#10;Forever yours,&#10;Your name"></textarea>
+        <textarea id="f-body" placeholder="My dearest,&#10;&#10;Write your letter hereÃ¢ÂÂ¦&#10;&#10;Forever yours,&#10;Your name"></textarea>
       </div>
 
       <div class="admin-actions">
@@ -1101,7 +1114,7 @@
 
       var btn = this;
       btn.disabled = true;
-      setStatus('Fetching current fileâ¦', 'status-info');
+      setStatus('Fetching current fileÃ¢ÂÂ¦', 'status-info');
 
       try {
         var res = await fetch('https://api.github.com/repos/' + repo + '/contents/' + file + '?ref=' + branch,
@@ -1116,7 +1129,7 @@
 
         var newContent = currentContent.replace('<!-- LETTERS_PLACEHOLDER -->', newArticle + '    <!-- LETTERS_PLACEHOLDER -->');
 
-        setStatus('Publishingâ¦', 'status-info');
+        setStatus('PublishingÃ¢ÂÂ¦', 'status-info');
         var putRes = await fetch('https://api.github.com/repos/' + repo + '/contents/' + file, {
           method: 'PUT',
           headers: { Authorization: 'token ' + token, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },

@@ -38,7 +38,7 @@
     .letter-header h2 { grid-column: 1; font-family: 'Playfair Display','Be Vietnam Pro',Georgia,serif; font-size: 1.2rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
     .letter-header .excerpt { grid-column: 1/-1; margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); font-style: italic; line-height: 1.5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity 0.25s; }
     .letter.open .letter-header .excerpt { opacity: 0; height: 0; margin: 0; overflow: hidden; }
-    .letter-header::after { content: 'â'; grid-column: 2; grid-row: 1/3; align-self: center; font-size: 1rem; color: var(--accent); opacity: 0.5; transition: transform 0.35s cubic-bezier(.77,.10,.22,1), opacity 0.2s; }
+    .letter-header::after { content: 'Ã¢ÂÂ'; grid-column: 2; grid-row: 1/3; align-self: center; font-size: 1rem; color: var(--accent); opacity: 0.5; transition: transform 0.35s cubic-bezier(.77,.10,.22,1), opacity 0.2s; }
     .letter.open .letter-header::after { transform: rotate(180deg); opacity: 0.8; }
     .letter-body { max-height: 0; overflow: hidden; transition: max-height 0.6s cubic-bezier(.77,.10,.22,1); }
     .letter-body-inner { padding: 1.4rem 1.6rem 1.8rem; border-top: 1px solid var(--rule); }
@@ -85,11 +85,30 @@
       <div class="letter-header">
         <time>April 18, 2026</time>
         <h2>Hello</h2>
-        <p class="excerpt">Xin chào em&hellip;</p>
+        <p class="excerpt">Xin chÃ o em&hellip;</p>
       </div>
       <div class="letter-body">
         <div class="letter-body-inner">
-          <p>Chào em, <br>Anh ngồi mày mò code ciếc để tạo ra cái này để viết cho em, không biết có ra gì không. Anh làm khi ngồi học quá chán và nhớ em hehe. Vẫn chưa biết cách thay nền các thứ kiểu gì, anh sẽ tìm hiểu rồi thay đổi sau. Tạm như này đã nhớ. Anh yêu em</p>
+          <p>ChÃ o em, <br>Anh ngá»i mÃ y mÃ² code ciáº¿c Äá» táº¡o ra cÃ¡i nÃ y Äá» viáº¿t cho em, khÃ´ng biáº¿t cÃ³ ra gÃ¬ khÃ´ng. Anh lÃ m khi ngá»i há»c quÃ¡ chÃ¡n vÃ  nhá» em hehe. Váº«n chÆ°a biáº¿t cÃ¡ch thay ná»n cÃ¡c thá»© kiá»u gÃ¬, anh sáº½ tÃ¬m hiá»u rá»i thay Äá»i sau. Táº¡m nhÆ° nÃ y ÄÃ£ nhá». Anh yÃªu em</p>
+        </div>
+      </div>
+    </article>
+
+        <article class="letter">
+      <div class="letter-header">
+        <time>April 20, 2026</time>
+        <h2>New week</h2>
+        <p class="excerpt">Hi vọng em sẽ có một tuần mới tràn đầy năng lượng&hellip;</p>
+      </div>
+      <div class="letter-body">
+        <div class="letter-body-inner">
+          <p>Gửi em,</p>
+          <p>Hôm nay là khởi đầu của một tuần mới, tuần gần cuối của tháng 4 rồi. Hôm nay cũng là tròn 1 tháng ngày em qua Taiwan thăm anh. Anh nhớ em lắm. Hôm nay cả hai mình đều dậy muộn và em thì bị nhức mỏi người lắm nên phải đi khám yhct. Thương vợ nhắm mong là không sao đâu.</p>
+          <p>Càng ngày thì với anh, khối lượng học tập rồi bài vở ngày càng nhiều, anh cũng đã chia sẻ với em. Em cũng bận bịu với công việc ở phòng khám. Anh biết thời gian dành cho nhau mỗi ngày đều phải bớt đi nhưng mình cũng đã luôn cố gắng để dành thời gian nói chuyện với nhau. I'm very appreciate that.</p>
+          <p>Mỗi một ngày trôi qua, anh đều thấy nhớ em. Anh biết bản thân mình cần phải cố gắng nhiều hơn nữa để khắc phục những gì bản thân vẫn đang lo ngại và để được về với em. Mọi thứ thì vẫn khó khăn khiến anh phải trăn trở nhiều, anh thì cũng không muốn đem lại ưu phiền hay tiêu cực cho em. Nên anh chỉ mong chúng mình cứ trải qua mỗi ngày với nhau được vui vẻ, hạnh phúc như hiện tại thôi.</p>
+          <p>Hi vọng mình sẽ có một tuần nhận được nhiều tin vui. Cảm ơn em. Anh yêu và nhớ em rất nhiều.</p>
+          <p>Anh yêu của em,</p>
+          <p>Alex</p>
         </div>
       </div>
     </article>
@@ -137,8 +156,8 @@
       <p class="admin-sub">Your words will appear on the page after a few seconds.</p>
       <div class="field"><label>Date</label><input type="text" id="f-date" placeholder="e.g. April 18, 2026"></div>
       <div class="field"><label>Title</label><input type="text" id="f-title" placeholder="e.g. A Sunday Morning"></div>
-      <div class="field"><label>Opening line (shown as preview)</label><input type="text" id="f-excerpt" placeholder="First sentence of your letterâ¦"></div>
-      <div class="field"><label>Letter (press Enter twice for new paragraph)</label><textarea id="f-body" placeholder="My dearest,&#10;&#10;Write your letter hereâ¦&#10;&#10;Forever yours,&#10;Your name"></textarea></div>
+      <div class="field"><label>Opening line (shown as preview)</label><input type="text" id="f-excerpt" placeholder="First sentence of your letterÃ¢ÂÂ¦"></div>
+      <div class="field"><label>Letter (press Enter twice for new paragraph)</label><textarea id="f-body" placeholder="My dearest,&#10;&#10;Write your letter hereÃ¢ÂÂ¦&#10;&#10;Forever yours,&#10;Your name"></textarea></div>
       <div class="admin-actions">
         <button class="btn btn-primary" id="btn-publish">Publish letter</button>
         <button class="btn btn-secondary" id="btn-close">Cancel</button>
@@ -230,7 +249,7 @@
       }).join('\n');
       var newArticle = '    <article class="letter">\n      <div class="letter-header">\n        <time>'+esc(date)+'</time>\n        <h2>'+esc(title)+'</h2>\n        <p class="excerpt">'+esc(excerpt||body.split('\n')[0].slice(0,80))+'&hellip;</p>\n      </div>\n      <div class="letter-body">\n        <div class="letter-body-inner">\n'+paragraphs+'\n        </div>\n      </div>\n    </article>\n\n';
       var btn = this; btn.disabled = true;
-      setStatus('Fetching current fileâ¦', 'status-info');
+      setStatus('Fetching current fileÃ¢ÂÂ¦', 'status-info');
       try {
         var res = await fetch('https://api.github.com/repos/'+repo+'/contents/'+file+'?ref='+branch, { headers: { Authorization: 'token '+token, Accept: 'application/vnd.github.v3+json' } });
         if (!res.ok) throw new Error('Could not fetch file ('+res.status+'). Check token and repo name.');
@@ -239,7 +258,7 @@
         var sha = data.sha;
         if (!currentContent.includes('<!-- LETTERS_PLACEHOLDER -->')) throw new Error('Marker not found. Make sure this file was created by this tool.');
         var newContent = currentContent.replace('<!-- LETTERS_PLACEHOLDER -->', newArticle+'    <!-- LETTERS_PLACEHOLDER -->');
-        setStatus('Publishingâ¦', 'status-info');
+        setStatus('PublishingÃ¢ÂÂ¦', 'status-info');
         var putRes = await fetch('https://api.github.com/repos/'+repo+'/contents/'+file, {
           method: 'PUT',
           headers: { Authorization: 'token '+token, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },

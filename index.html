@@ -1,5 +1,5 @@
-<details> <summary><!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
       background-image: radial-gradient(ellipse at 20% 10%, rgba(110,45,82,0.04) 0%, transparent 60%),
                         radial-gradient(ellipse at 80% 90%, rgba(110,45,82,0.04) 0%, transparent 60%);
       color: var(--ink);
-      font-family: 'Lora', 'Be Vietnam Pro', Georgia, serif;
+      font-family: 'Be Vietnam Pro', 'Lora', Georgia, serif;
       min-height: 100vh;
       padding: 0 1rem 4rem;
     }
@@ -38,7 +38,7 @@
     .letter-header h2 { grid-column: 1; font-family: 'Playfair Display','Be Vietnam Pro',Georgia,serif; font-size: 1.2rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
     .letter-header .excerpt { grid-column: 1/-1; margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); font-style: italic; line-height: 1.5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity 0.25s; }
     .letter.open .letter-header .excerpt { opacity: 0; height: 0; margin: 0; overflow: hidden; }
-    .letter-header::after { content: 'ÃÂ¢ÃÂÃÂ'; grid-column: 2; grid-row: 1/3; align-self: center; font-size: 1rem; color: var(--accent); opacity: 0.5; transition: transform 0.35s cubic-bezier(.77,.10,.22,1), opacity 0.2s; }
+    .letter-header::after { content: '\2193'; grid-column: 2; grid-row: 1/3; align-self: center; font-size: 1rem; color: var(--accent); opacity: 0.5; transition: transform 0.35s cubic-bezier(.77,.10,.22,1), opacity 0.2s; }
     .letter.open .letter-header::after { transform: rotate(180deg); opacity: 0.8; }
     .letter-body { max-height: 0; overflow: hidden; transition: max-height 0.6s cubic-bezier(.77,.10,.22,1); }
     .letter-body-inner { padding: 1.4rem 1.6rem 1.8rem; border-top: 1px solid var(--rule); }
@@ -53,11 +53,11 @@
     .admin-box .admin-sub { font-size: 0.85rem; color: var(--muted); font-style: italic; margin-bottom: 1.5rem; }
     .field { margin-bottom: 1.1rem; }
     .field label { display: block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; color: var(--muted); text-transform: uppercase; margin-bottom: 0.4rem; }
-    .field input, .field textarea { width: 100%; font-family: 'Lora','Be Vietnam Pro',serif; font-size: 0.95rem; color: var(--ink); background: var(--cream); border: 1px solid var(--rule); border-radius: 3px; padding: 0.6rem 0.8rem; outline: none; resize: vertical; transition: border-color 0.2s; }
+    .field input, .field textarea { width: 100%; font-family: 'Be Vietnam Pro','Lora',serif; font-size: 0.95rem; color: var(--ink); background: var(--cream); border: 1px solid var(--rule); border-radius: 3px; padding: 0.6rem 0.8rem; outline: none; resize: vertical; transition: border-color 0.2s; }
     .field input:focus, .field textarea:focus { border-color: var(--accent); }
     .field textarea { min-height: 180px; line-height: 1.7; }
     .admin-actions { display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap; }
-    .btn { font-family: 'Lora',serif; font-size: 0.9rem; padding: 0.6rem 1.4rem; border-radius: 3px; border: none; cursor: pointer; transition: opacity 0.2s, transform 0.15s; }
+    .btn { font-family: 'Be Vietnam Pro','Lora',serif; font-size: 0.9rem; padding: 0.6rem 1.4rem; border-radius: 3px; border: none; cursor: pointer; transition: opacity 0.2s, transform 0.15s; }
     .btn:active { transform: scale(0.97); }
     .btn-primary { background: var(--accent); color: #fff; }
     .btn-secondary { background: transparent; color: var(--muted); border: 1px solid var(--rule); }
@@ -81,82 +81,54 @@
   </header>
 
   <section class="letters-list" id="letters-list">
-        <article class="letter">
-      <div class="letter-header">
-        <time>April 18, 2026</time>
-        <h2>Hello</h2>
-        <p class="excerpt">Xin chÃÂ o em&hellip;</p>
-      </div>
-      <div class="letter-body">
-        <div class="letter-body-inner">
-          <p>ChÃÂ o em, <br>Anh ngÃ¡Â»Âi mÃÂ y mÃÂ² code ciÃ¡ÂºÂ¿c ÃÂÃ¡Â»Â tÃ¡ÂºÂ¡o ra cÃÂ¡i nÃÂ y ÃÂÃ¡Â»Â viÃ¡ÂºÂ¿t cho em, khÃÂ´ng biÃ¡ÂºÂ¿t cÃÂ³ ra gÃÂ¬ khÃÂ´ng. Anh lÃÂ m khi ngÃ¡Â»Âi hÃ¡Â»Âc quÃÂ¡ chÃÂ¡n vÃÂ  nhÃ¡Â»Â em hehe. VÃ¡ÂºÂ«n chÃÂ°a biÃ¡ÂºÂ¿t cÃÂ¡ch thay nÃ¡Â»Ân cÃÂ¡c thÃ¡Â»Â© kiÃ¡Â»Âu gÃÂ¬, anh sÃ¡ÂºÂ½ tÃÂ¬m hiÃ¡Â»Âu rÃ¡Â»Âi thay ÃÂÃ¡Â»Âi sau. TÃ¡ÂºÂ¡m nhÃÂ° nÃÂ y ÃÂÃÂ£ nhÃ¡Â»Â. Anh yÃÂªu em</p>
-        </div>
-      </div>
-    </article>
-
-        <article class="letter">
-      <div class="letter-header">
-        <time>April 20, 2026</time>
-        <h2>New week</h2>
-        <p class="excerpt">Hi vá»ng em sáº½ cÃ³ má»t tuáº§n má»i trÃ n Äáº§y nÄng lÆ°á»£ng&hellip;</p>
-      </div>
-      <div class="letter-body">
-        <div class="letter-body-inner">
-          <p>Gá»­i em,</p>
-          <p>HÃ´m nay lÃ  khá»i Äáº§u cá»§a má»t tuáº§n má»i, tuáº§n gáº§n cuá»i cá»§a thÃ¡ng 4 rá»i. HÃ´m nay cÅ©ng lÃ  trÃ²n 1 thÃ¡ng ngÃ y em qua Taiwan thÄm anh. Anh nhá» em láº¯m. HÃ´m nay cáº£ hai mÃ¬nh Äá»u dáº­y muá»n vÃ  em thÃ¬ bá» nhá»©c má»i ngÆ°á»i láº¯m nÃªn pháº£i Äi khÃ¡m yhct. ThÆ°Æ¡ng vá»£ nháº¯m mong lÃ  khÃ´ng sao ÄÃ¢u.</p>
-          <p>CÃ ng ngÃ y thÃ¬ vá»i anh, khá»i lÆ°á»£ng há»c táº­p rá»i bÃ i vá» ngÃ y cÃ ng nhiá»u, anh cÅ©ng ÄÃ£ chia sáº» vá»i em. Em cÅ©ng báº­n bá»u vá»i cÃ´ng viá»c á» phÃ²ng khÃ¡m. Anh biáº¿t thá»i gian dÃ nh cho nhau má»i ngÃ y Äá»u pháº£i bá»t Äi nhÆ°ng mÃ¬nh cÅ©ng ÄÃ£ luÃ´n cá» gáº¯ng Äá» dÃ nh thá»i gian nÃ³i chuyá»n vá»i nhau. I'm very appreciate that.</p>
-          <p>Má»i má»t ngÃ y trÃ´i qua, anh Äá»u tháº¥y nhá» em. Anh biáº¿t báº£n thÃ¢n mÃ¬nh cáº§n pháº£i cá» gáº¯ng nhiá»u hÆ¡n ná»¯a Äá» kháº¯c phá»¥c nhá»¯ng gÃ¬ báº£n thÃ¢n váº«n Äang lo ngáº¡i vÃ  Äá» ÄÆ°á»£c vá» vá»i em. Má»i thá»© thÃ¬ váº«n khÃ³ khÄn khiáº¿n anh pháº£i trÄn trá» nhiá»u, anh thÃ¬ cÅ©ng khÃ´ng muá»n Äem láº¡i Æ°u phiá»n hay tiÃªu cá»±c cho em. NÃªn anh chá» mong chÃºng mÃ¬nh cá»© tráº£i qua má»i ngÃ y vá»i nhau ÄÆ°á»£c vui váº», háº¡nh phÃºc nhÆ° hiá»n táº¡i thÃ´i.</p>
-          <p>Hi vá»ng mÃ¬nh sáº½ cÃ³ má»t tuáº§n nháº­n ÄÆ°á»£c nhiá»u tin vui. Cáº£m Æ¡n em. Anh yÃªu vÃ  nhá» em ráº¥t nhiá»u.</p>
-          <p>Anh yÃªu cá»§a em,</p>
-          <p>Alex</p>
-        </div>
-      </div>
-    </article>
-
-        <article class="letter">
-      <div class="letter-header">
-        <time>June 30, 2026</time>
-        <h2>Ngày mai anh đi làm</h2>
-        <p class="excerpt">Lâu rồi anh mới có thời gian để viết&hellip;</p>
-      </div>
-      <div class="letter-body">
-        <div class="letter-body-inner">
-          <p>Gửi em yêu,<br>Ngày mai là ngày khởi đầu của tháng mới, tháng 7, bắt đầu bước vào nửa năm còn lại của 2026 rồi. Anh chưa làm được gì cho em. Có những ngày, anh cảm thấy bất lực vô cùng, tự đặt ra câu hỏi không biết liệu con đường mình đang theo có đúng đắn. Anh muốn làm em vui, muốn lo được cho em, không muốn em phải đi làm mệt mỏi. Anh biết anh sẽ phải cố gắng rất nhiều để đạt được điều đó. Và tất nhiên là anh vãn đang cố gắng từng ngày đây. Sự túng thiếu về tiền bạc cũng khiến anh rất đau đầu, có những ngày cứ tự nhiên bật khóc vì cảm thấy sao mà cứ thấy bản thân khổ sở sao sao ấy. Ngày mai anh bắt đầu thử đi làm 1 công việc tay chân để kiếm tiền. Anh muốn kiếm tiền và cũng muốn thử xem kiếm đồng tiền ở đất nước này, liệu có dễ cho người nước ngoài? Anh không ngại vất vả đâu vợ ạ. Anh chỉ muốn làm được tất cả vì em thôi. <br>Em cứ yên tâm nhé<br>Đợi anh thêm chút nữa thôi<br>Anh yêu em nhiều<br>Yêu vợ,<br>Anh yêu của em</p>
-        </div>
-      </div>
-    </article>
-
     <!-- LETTERS_PLACEHOLDER -->
 
     <article class="letter">
       <div class="letter-header">
-        <time>April 18, 2026</time>
-        <h2>The First of Many</h2>
-        <p class="excerpt">I built this little corner of the internet just for you&hellip;</p>
+        <time>June 30, 2026</time>
+        <h2>Ngày mai anh đi làm</h2>
+        <p class="excerpt">Lâu rồi anh mới có thời gian để viết…</p>
       </div>
       <div class="letter-body">
         <div class="letter-body-inner">
-          <p>My dearest,</p>
-          <p>I built this little corner of the internet just for you. Whenever the words feel too big for a text message, or I want you to have something to return to on a quiet evening &mdash; you&rsquo;ll find them here.</p>
-          <p>There are no grand announcements, no audience. Just you, and whatever I have needed to say. I hope that each time you open this page you feel, even for a moment, exactly how much you are loved.</p>
-          <p class="sign-off">Forever yours,<br><em>Your love</em></p>
+          <p>Gửi em yêu,</p>
+          <p>Ngày mai là ngày khởi đầu của tháng mới, tháng 7, bắt đầu bước vào nửa năm còn lại của 2026 rồi. Anh chưa làm được gì cho em. Có những ngày, anh cảm thấy bất lực vô cùng, tự đặt ra câu hỏi không biết liệu con đường mình đang theo có đúng đắn. Anh muốn làm em vui, muốn lo được cho em, không muốn em phải đi làm mệt mỏi. Anh biết anh sẽ phải cố gắng rất nhiều để đạt được điều đó. Và tất nhiên là anh vẫn đang cố gắng từng ngày đây. Sự túng thiếu về tiền bạc cũng khiến anh rất đau đầu, có những ngày cứ tự nhiên bật khóc vì cảm thấy sao mà cứ thấy bản thân khổ sở sao sao ấy. Ngày mai anh bắt đầu thử đi làm 1 công việc tay chân để kiếm tiền. Anh muốn kiếm tiền và cũng muốn thử xem kiếm đồng tiền ở đất nước này, liệu có dễ cho người nước ngoài? Anh không ngại vất vả đâu vợ ạ. Anh chỉ muốn làm được tất cả vì em thôi.</p>
+          <p>Em cứ yên tâm nhé. Đợi anh thêm chút nữa thôi.</p>
+          <p>Anh yêu em nhiều.</p>
+          <p class="sign-off">Yêu vợ,<br><em>Anh yêu của em</em></p>
         </div>
       </div>
     </article>
 
     <article class="letter">
       <div class="letter-header">
-        <time>April 15, 2026</time>
-        <h2>A Quiet Tuesday</h2>
-        <p class="excerpt">Nothing special happened today &mdash; which is exactly why I wanted to write&hellip;</p>
+        <time>April 20, 2026</time>
+        <h2>New week</h2>
+        <p class="excerpt">Hi vọng em sẽ có một tuần mới tràn đầy năng lượng…</p>
       </div>
       <div class="letter-body">
         <div class="letter-body-inner">
-          <p>My love,</p>
-          <p>Nothing special happened today &mdash; which is exactly why I wanted to write. I&rsquo;ve noticed I tend to save big feelings for big occasions, and forget to say the small ones out loud.</p>
-          <p>So here it is: I am so grateful for ordinary days with you. The coffee, the quiet, the way you laugh at your own jokes before you finish telling them. All of it.</p>
-          <p>I love you more than I remember to say.</p>
-          <p class="sign-off">Yours always,<br><em>Your love</em></p>
+          <p>Gửi em,</p>
+          <p>Hôm nay là khởi đầu của một tuần mới, tuần gần cuối của tháng 4 rồi. Hôm nay cũng là tròn 1 tháng ngày em qua Taiwan thăm anh. Anh nhớ em lắm. Hôm nay cả hai mình đều dậy muộn và em thì bị nhức mỏi người lắm nên phải đi khám yhct. Thương vợ nhắm mong là không sao đâu.</p>
+          <p>Càng ngày thì với anh, khối lượng học tập rồi bài vở ngày càng nhiều, anh cũng đã chia sẻ với em. Em cũng bận bịu với công việc ở phòng khám. Anh biết thời gian dành cho nhau mỗi ngày đều phải bớt đi nhưng mình cũng đã luôn cố gắng để dành thời gian nói chuyện với nhau. I'm very appreciate that.</p>
+          <p>Mỗi một ngày trôi qua, anh đều thấy nhớ em. Anh biết bản thân mình cần phải cố gắng nhiều hơn nữa để khắc phục những gì bản thân vẫn đang lo ngại và để được về với em. Mọi thứ thì vẫn khó khăn khiến anh phải trăn trở nhiều, anh thì cũng không muốn đem lại ưu phiền hay tiêu cực cho em. Nên anh chỉ mong chúng mình cứ trải qua mỗi ngày với nhau được vui vẻ, hạnh phúc như hiện tại thôi.</p>
+          <p>Hi vọng mình sẽ có một tuần nhận được nhiều tin vui. Cảm ơn em. Anh yêu và nhớ em rất nhiều.</p>
+          <p class="sign-off">Anh yêu của em,<br><em>Alex</em></p>
+        </div>
+      </div>
+    </article>
+
+    <article class="letter">
+      <div class="letter-header">
+        <time>April 18, 2026</time>
+        <h2>Hello</h2>
+        <p class="excerpt">Chào em, anh ngồi mày mò code để tạo ra cái này…</p>
+      </div>
+      <div class="letter-body">
+        <div class="letter-body-inner">
+          <p>Chào em,</p>
+          <p>Anh ngồi mày mò code ciếc để tạo ra cái này để viết cho em, không biết có ra gì không. Anh làm khi ngồi học quá chán và nhớ em hehe. Vẫn chưa biết cách thay nền các thứ kiểu gì, anh sẽ tìm hiểu rồi thay đổi sau. Tạm như này đã nhớ.</p>
+          <p class="sign-off">Anh yêu em</p>
         </div>
       </div>
     </article>
@@ -167,10 +139,10 @@
     <div class="admin-box">
       <h2>Write a Letter</h2>
       <p class="admin-sub">Your words will appear on the page after a few seconds.</p>
-      <div class="field"><label>Date</label><input type="text" id="f-date" placeholder="e.g. April 18, 2026"></div>
-      <div class="field"><label>Title</label><input type="text" id="f-title" placeholder="e.g. A Sunday Morning"></div>
-      <div class="field"><label>Opening line (shown as preview)</label><input type="text" id="f-excerpt" placeholder="First sentence of your letterÃÂ¢ÃÂÃÂ¦"></div>
-      <div class="field"><label>Letter (press Enter twice for new paragraph)</label><textarea id="f-body" placeholder="My dearest,&#10;&#10;Write your letter hereÃÂ¢ÃÂÃÂ¦&#10;&#10;Forever yours,&#10;Your name"></textarea></div>
+      <div class="field"><label>Date</label><input type="text" id="f-date" placeholder="vd. April 18, 2026"></div>
+      <div class="field"><label>Title</label><input type="text" id="f-title" placeholder="vd. A Sunday Morning"></div>
+      <div class="field"><label>Opening line (preview)</label><input type="text" id="f-excerpt" placeholder="Cau dau tien cua buc thu..."></div>
+      <div class="field"><label>Letter (Enter 2 lan de xuong dong moi)</label><textarea id="f-body" placeholder="Em yeu,&#10;&#10;Viet thu o day...&#10;&#10;Yeu vo,&#10;Anh"></textarea></div>
       <div class="admin-actions">
         <button class="btn btn-primary" id="btn-publish">Publish letter</button>
         <button class="btn btn-secondary" id="btn-close">Cancel</button>
@@ -181,10 +153,10 @@
         <div class="field">
           <label>GitHub token</label>
           <input type="password" id="cfg-token" placeholder="ghp_xxxxxxxxxxxx">
-          <p class="token-hint">Create one at <a href="https://github.com/settings/tokens/new?scopes=repo&description=love-letters" target="_blank">github.com/settings/tokens</a> &mdash; tick <strong>repo</strong>. Saved only in your browser.</p>
+          <p class="token-hint">Tao tai <a href="https://github.com/settings/tokens/new?scopes=repo&description=love-letters" target="_blank">github.com/settings/tokens</a> &mdash; tick <strong>repo</strong>.</p>
         </div>
-        <div class="field"><label>GitHub username / repo name</label><input type="text" id="cfg-repo" placeholder="alexdangyeuvl/Formywife"></div>
-        <div class="field"><label>File path in repo</label><input type="text" id="cfg-file" placeholder="index.html"></div>
+        <div class="field"><label>username / repo</label><input type="text" id="cfg-repo" placeholder="alexdangyeuvl/Formywife"></div>
+        <div class="field"><label>File path</label><input type="text" id="cfg-file" placeholder="index.html"></div>
         <div class="field"><label>Branch</label><input type="text" id="cfg-branch" placeholder="main"></div>
         <div class="admin-actions"><button class="btn btn-secondary" id="btn-save-cfg">Save settings</button></div>
       </details>
@@ -198,7 +170,6 @@
         el.classList.remove('open');
       });
     }
-
     document.querySelectorAll('.letter-header').forEach(function(h) {
       h.addEventListener('click', function() {
         var letter = this.closest('.letter');
@@ -215,7 +186,6 @@
 
     var panel = document.getElementById('admin-panel');
     if (location.search.includes('write')) { panel.classList.add('visible'); loadConfig(); setToday(); }
-
     document.getElementById('btn-close').addEventListener('click', function() {
       panel.classList.remove('visible');
       history.replaceState(null, '', location.pathname);
@@ -227,7 +197,6 @@
       document.getElementById('cfg-file').value   = localStorage.getItem('ll_file')   || 'index.html';
       document.getElementById('cfg-branch').value = localStorage.getItem('ll_branch') || 'main';
     }
-
     document.getElementById('btn-save-cfg').addEventListener('click', function() {
       localStorage.setItem('ll_token',  document.getElementById('cfg-token').value.trim());
       localStorage.setItem('ll_repo',   document.getElementById('cfg-repo').value.trim());
@@ -241,8 +210,10 @@
       var m = ['January','February','March','April','May','June','July','August','September','October','November','December'];
       document.getElementById('f-date').value = m[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
     }
-
     function setStatus(msg, cls) { var el = document.getElementById('admin-status'); el.textContent = msg; el.className = 'admin-status ' + (cls||''); }
+
+    function b64DecodeUtf8(b64) { return decodeURIComponent(escape(atob(b64))); }
+    function b64EncodeUtf8(str) { return btoa(unescape(encodeURIComponent(str))); }
 
     document.getElementById('btn-publish').addEventListener('click', async function() {
       var token  = localStorage.getItem('ll_token')  || '';
@@ -253,37 +224,37 @@
       var title = document.getElementById('f-title').value.trim();
       var excerpt = document.getElementById('f-excerpt').value.trim();
       var body = document.getElementById('f-body').value.trim();
-      if (!date || !title || !body) { setStatus('Please fill in date, title, and letter.', 'status-err'); return; }
-      if (!token || !repo) { setStatus('Open Settings below and enter your GitHub token and repo.', 'status-err'); return; }
+      if (!date || !title || !body) { setStatus('Vui long dien Date, Title va Letter.', 'status-err'); return; }
+      if (!token || !repo) { setStatus('Mo Settings o duoi va nhap GitHub token + repo.', 'status-err'); return; }
       var paragraphs = body.split(/\n\n+/).map(function(p) {
         var line = p.trim().replace(/</g,'&lt;').replace(/>/g,'&gt;');
-        var cls = (line.startsWith('Forever')||line.startsWith('Yours')||line.startsWith('Always')||line.startsWith('With love')||line.startsWith('Love,')||line.startsWith('Your')) ? ' class="sign-off"' : '';
+        var cls = (line.startsWith('Forever')||line.startsWith('Yours')||line.startsWith('Always')||line.startsWith('With love')||line.startsWith('Love,')||line.startsWith('Your')||line.startsWith('Yeu vo')||line.startsWith('Anh yeu')||line.startsWith('Yeu em')) ? ' class="sign-off"' : '';
         return '          <p'+cls+'>'+line.replace(/\n/g,'<br>')+'</p>';
       }).join('\n');
       var newArticle = '    <article class="letter">\n      <div class="letter-header">\n        <time>'+esc(date)+'</time>\n        <h2>'+esc(title)+'</h2>\n        <p class="excerpt">'+esc(excerpt||body.split('\n')[0].slice(0,80))+'&hellip;</p>\n      </div>\n      <div class="letter-body">\n        <div class="letter-body-inner">\n'+paragraphs+'\n        </div>\n      </div>\n    </article>\n\n';
       var btn = this; btn.disabled = true;
-      setStatus('Fetching current fileÃÂ¢ÃÂÃÂ¦', 'status-info');
+      setStatus('Dang doc file...', 'status-info');
       try {
         var res = await fetch('https://api.github.com/repos/'+repo+'/contents/'+file+'?ref='+branch, { headers: { Authorization: 'token '+token, Accept: 'application/vnd.github.v3+json' } });
-        if (!res.ok) throw new Error('Could not fetch file ('+res.status+'). Check token and repo name.');
+        if (!res.ok) throw new Error('Khong doc duoc file ('+res.status+'). Kiem tra token va ten repo.');
         var data = await res.json();
-        var currentContent = atob(data.content.replace(/\n/g,''));
+        var currentContent = b64DecodeUtf8(data.content.replace(/\n/g,''));
         var sha = data.sha;
-        if (!currentContent.includes('<!-- LETTERS_PLACEHOLDER -->')) throw new Error('Marker not found. Make sure this file was created by this tool.');
+        if (!currentContent.includes('<!-- LETTERS_PLACEHOLDER -->')) throw new Error('Khong tim thay marker trong file.');
         var newContent = currentContent.replace('<!-- LETTERS_PLACEHOLDER -->', newArticle+'    <!-- LETTERS_PLACEHOLDER -->');
-        setStatus('PublishingÃÂ¢ÃÂÃÂ¦', 'status-info');
+        setStatus('Dang dang...', 'status-info');
         var putRes = await fetch('https://api.github.com/repos/'+repo+'/contents/'+file, {
           method: 'PUT',
           headers: { Authorization: 'token '+token, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
-          body: JSON.stringify({ message: 'Add letter: '+title, content: btoa(unescape(encodeURIComponent(newContent))), sha: sha, branch: branch })
+          body: JSON.stringify({ message: 'Add letter: '+title, content: b64EncodeUtf8(newContent), sha: sha, branch: branch })
         });
         if (!putRes.ok) { var err = await putRes.json(); throw new Error(err.message||putRes.status); }
-        setStatus('Letter published! Page updates in ~30 seconds.', 'status-ok');
+        setStatus('Da dang thu! Trang se cap nhat sau ~30 giay.', 'status-ok');
         document.getElementById('f-title').value = '';
         document.getElementById('f-excerpt').value = '';
         document.getElementById('f-body').value = '';
         setToday();
-      } catch(e) { setStatus('Error: '+e.message, 'status-err'); }
+      } catch(e) { setStatus('Loi: '+e.message, 'status-err'); }
       finally { btn.disabled = false; }
     });
 
@@ -292,4 +263,3 @@
 
 </body>
 </html>
-</summary>
